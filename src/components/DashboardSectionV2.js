@@ -1,12 +1,14 @@
 import { AcademicCapIcon, CalendarIcon, ChartPieIcon, DocumentDuplicateIcon, FolderIcon, HomeIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/24/outline'
+import Parents from './parentsTab/Parents'
+
 
 const navigation = [
     { name: 'Admins', href: '#', icon: HomeIcon, count: '5', current: true },
-    { name: 'Parents', href: '#', icon: UserGroupIcon, count: '5', current: false },
-    { name: 'Students', href: '#', icon: AcademicCapIcon, count: '5', current: false },
+    { name: 'Parents', href: '#', icon: UserGroupIcon, count: '1k', current: false, component: <Parents /> },
+    { name: 'Students', href: '#', icon: AcademicCapIcon, count: '800', current: false },
     { name: 'Teachers', href: '#', icon: UsersIcon, current: false },
     { name: 'Classes', href: '#', icon: FolderIcon, count: '12', current: false },
-    { name: 'Calendar', href: '#', icon: CalendarIcon, count: '20+', current: false },
+    { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
     { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
     { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
 ]
@@ -24,9 +26,9 @@ export default function DashboardSectionV2({ selectedTab, setSelectedTab }) {
     return (
         <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
             <nav className="flex flex-1 flex-col mt-1">
-                <ul role="list" className="flex flex-1 flex-col gap-y-7">
+                <ul className="flex flex-1 flex-col gap-y-7">
                     <li>
-                        <ul role="list" className="-mx-2 space-y-1">
+                        <ul className="-mx-2 space-y-1">
                             {navigation.map((item) => (
                                 <li key={item.name} onClick={() => setSelectedTab(item)}>
                                     <a
@@ -61,7 +63,7 @@ export default function DashboardSectionV2({ selectedTab, setSelectedTab }) {
                     </li>
                     <li>
                         <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
-                        <ul role="list" className="-mx-2 mt-2 space-y-1">
+                        <ul className="-mx-2 mt-2 space-y-1">
                             {teams.map((team) => (
                                 <li key={team.name}>
                                     <a
