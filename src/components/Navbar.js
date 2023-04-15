@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "./../util/router";
+
 import { useAuth } from "./../util/auth";
+import { Link } from "./../util/router";
 
 function Navbar(props) {
   const auth = useAuth();

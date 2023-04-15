@@ -1,7 +1,8 @@
 import React from "react";
-import DashboardItems from "./DashboardItems";
-import { Link } from "./../util/router";
+
 import { useAuth } from "./../util/auth";
+import { Link } from "./../util/router";
+import DashboardItems from "./DashboardItems";
 
 function DashboardSection(props) {
   const auth = useAuth();
@@ -12,7 +13,7 @@ function DashboardSection(props) {
         <div className="flex flex-wrap">
           <div className="p-4 w-full md:w-1/2">
             <div className="rounded border border-gray-200">
-              <DashboardItems />
+              {/* <DashboardItems /> */}
             </div>
           </div>
           <div className="p-4 w-full md:w-1/2">

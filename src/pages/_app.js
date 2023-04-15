@@ -1,26 +1,28 @@
 import React from "react";
-import "./../styles/global.css";
+
 import Navbar from "./../components/Navbar";
-import IndexPage from "./index";
-import AboutPage from "./about";
-import PricingPage from "./pricing";
-import AuthPage from "./auth";
-import DashboardPage from "./dashboard";
-import SettingsPage from "./settings";
-import LegalPage from "./legal";
-import { Switch, Route, Router } from "./../util/router";
-import FirebaseActionPage from "./firebase-action";
-import NotFoundPage from "./404";
-import "./../util/analytics";
 import { AuthProvider } from "./../util/auth";
 import { QueryClientProvider } from "./../util/db";
+import { Route, Router, Switch } from "./../util/router";
+import NotFoundPage from "./404";
+import AboutPage from "./about";
+import AuthPage from "./auth";
+import DashboardPage from "./dashboard";
+import FirebaseActionPage from "./firebase-action";
+import IndexPage from "./index";
+import LegalPage from "./legal";
+import PricingPage from "./pricing";
+import SettingsPage from "./settings";
+
+import "./../styles/global.css";
+import "./../util/analytics";
 
 function App(props) {
   return (
     <QueryClientProvider>
       <AuthProvider>
         <Router>
-          <>
+          <div className="flex flex-col h-screen">
             <Navbar />
 
             <Switch>
@@ -46,7 +48,7 @@ function App(props) {
 
               <Route component={NotFoundPage} />
             </Switch>
-          </>
+          </div>
         </Router>
       </AuthProvider>
     </QueryClientProvider>
