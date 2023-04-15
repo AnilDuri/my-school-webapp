@@ -11,7 +11,7 @@ function AuthPage(props) {
       <Meta title="Auth" />
       <AuthSection
         type={router.query.type}
-        providers={["google", "facebook", "twitter"]}
+        // providers={["google", "facebook", "twitter"]}
         afterAuthPath={router.query.next || "/dashboard"}
       />
     </>
