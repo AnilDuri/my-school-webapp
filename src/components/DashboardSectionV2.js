@@ -1,15 +1,16 @@
 import { AcademicCapIcon, CalendarIcon, ChartPieIcon, DocumentDuplicateIcon, FolderIcon, HomeIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/24/outline'
 
-import Calendar from './calendarTab/Calendar'
-import Parents from './parentsTab/Parents'
+import CalendarTab from './calendarTab/CalendarTab'
+import AddParentModal from './parentsTab/AddParentModal'
+import ParentsTab from './parentsTab/ParentsTab'
 
 const navigation = [
-    { name: 'Admins', href: '#', icon: HomeIcon, count: '5', current: true },
-    { name: 'Parents', href: '#', icon: UserGroupIcon, count: '1k', current: false, component: <Parents /> },
+    { name: 'Admins', href: '#', icon: HomeIcon, count: '5', current: true},
+    { name: 'Parents', href: '#', icon: UserGroupIcon, count: '1k', current: false, component: <ParentsTab /> },
     { name: 'Students', href: '#', icon: AcademicCapIcon, count: '800', current: false },
     { name: 'Teachers', href: '#', icon: UsersIcon, current: false },
     { name: 'Classes', href: '#', icon: FolderIcon, count: '12', current: false },
-    { name: 'Calendar', href: '#', icon: CalendarIcon, current: false, component: <Calendar /> },
+    { name: 'Calendar', href: '#', icon: CalendarIcon, current: false, component: <CalendarTab /> },
     { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
     { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
 ]

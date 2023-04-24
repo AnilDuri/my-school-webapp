@@ -101,7 +101,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Calendar() {
+export default function CalendarTab() {
   return (
     <div className='p-10 h-full max-h-full overflow-auto'>
       <div className="relative grid grid-cols-1 gap-x-14 md:grid-cols-2">
