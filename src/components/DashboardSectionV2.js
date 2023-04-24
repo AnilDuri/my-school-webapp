@@ -1,5 +1,6 @@
 import { AcademicCapIcon, CalendarIcon, ChartPieIcon, DocumentDuplicateIcon, FolderIcon, HomeIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/24/outline'
 import Parents from './parentsTab/Parents'
+import Calendar from './calendarTab/Calendar'
 
 
 const navigation = [
@@ -8,7 +9,7 @@ const navigation = [
     { name: 'Students', href: '#', icon: AcademicCapIcon, count: '800', current: false },
     { name: 'Teachers', href: '#', icon: UsersIcon, current: false },
     { name: 'Classes', href: '#', icon: FolderIcon, count: '12', current: false },
-    { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
+    { name: 'Calendar', href: '#', icon: CalendarIcon, current: false, component: <Calendar /> },
     { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
     { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
 ]
