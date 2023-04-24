@@ -19,7 +19,6 @@ function DashboardPage(props) {
       </div>
       <div className="flex w-5/6 h-full overflow-auto flex-col">
         <Padding>
-          {/* {[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,,1,1,1,].map((a) => <div className="p-10">{a}</div>)} */}
           {selectedTab && selectedTab.component ? selectedTab.component :
             <p>All Items will be displayed here</p>
           }
