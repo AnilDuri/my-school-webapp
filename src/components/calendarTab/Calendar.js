@@ -103,7 +103,7 @@ function classNames(...classes) {
 
 export default function Calendar() {
   return (
-    <div className='p-10 h-full bg-red-500 max-h-full overflow-auto'>
+    <div className='p-10 h-full max-h-full overflow-auto'>
       <div className="relative grid grid-cols-1 gap-x-14 md:grid-cols-2">
         <button
           type="button"

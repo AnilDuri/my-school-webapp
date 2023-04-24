@@ -22,32 +22,36 @@ function App(props) {
     <QueryClientProvider>
       <AuthProvider>
         <Router>
-          <div className="flex flex-col h-screen">
-            <Navbar />
+          <div className="flex flex-col h-screen max-h-screen">
+            <div className="h-1/12">
+              <Navbar />
+            </div>
 
-            <Switch>
-              <Route exact path="/" component={IndexPage} />
+            <div className="grow flex-col h-11/12">
+              <Switch>
+                <Route exact path="/" component={IndexPage} />
 
-              <Route exact path="/about" component={AboutPage} />
+                <Route exact path="/about" component={AboutPage} />
 
-              <Route exact path="/pricing" component={PricingPage} />
+                <Route exact path="/pricing" component={PricingPage} />
 
-              <Route exact path="/auth/:type" component={AuthPage} />
+                <Route exact path="/auth/:type" component={AuthPage} />
 
-              <Route exact path="/dashboard" component={DashboardPage} />
+                <Route exact path="/dashboard" component={DashboardPage} />
 
-              <Route exact path="/settings/:section" component={SettingsPage} />
+                <Route exact path="/settings/:section" component={SettingsPage} />
 
-              <Route exact path="/legal/:section" component={LegalPage} />
+                <Route exact path="/legal/:section" component={LegalPage} />
 
-              <Route
-                exact
-                path="/firebase-action"
-                component={FirebaseActionPage}
-              />
+                <Route
+                  exact
+                  path="/firebase-action"
+                  component={FirebaseActionPage}
+                />
 
-              <Route component={NotFoundPage} />
-            </Switch>
+                <Route component={NotFoundPage} />
+              </Switch>
+            </div>
           </div>
         </Router>
       </AuthProvider>

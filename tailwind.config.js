@@ -4,7 +4,12 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        '1/12': '8.333333333%',
+        '11/12': '91.66666667%',
+      }
+    },
     // Default projects breakpoints
     // https://tailwindcss.com/docs/screens
     screens: {

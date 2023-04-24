@@ -1,7 +1,7 @@
 import { AcademicCapIcon, CalendarIcon, ChartPieIcon, DocumentDuplicateIcon, FolderIcon, HomeIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/24/outline'
-import Parents from './parentsTab/Parents'
-import Calendar from './calendarTab/Calendar'
 
+import Calendar from './calendarTab/Calendar'
+import Parents from './parentsTab/Parents'
 
 const navigation = [
     { name: 'Admins', href: '#', icon: HomeIcon, count: '5', current: true },
@@ -25,7 +25,7 @@ function classNames(...classes) {
 
 export default function DashboardSectionV2({ selectedTab, setSelectedTab }) {
     return (
-        <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
+        <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 h-full">
             <nav className="flex flex-1 flex-col mt-1">
                 <ul className="flex flex-1 flex-col gap-y-7">
                     <li>
