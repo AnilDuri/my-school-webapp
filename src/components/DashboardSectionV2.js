@@ -15,9 +15,9 @@ const navigation = [
     { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
 ]
 const teams = [
-    { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-    { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-    { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
+    { id: 1, name: 'Settings', href: '#', initial: 'H', current: false },
+    { id: 2, name: 'Subscriptions', href: '#', initial: 'T', current: false },
+    { id: 3, name: 'Contact MSA Team', href: '#', initial: 'W', current: false },
 ]
 
 function classNames(...classes) {
