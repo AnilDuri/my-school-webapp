@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../Button";
 
 export default function Modal({ open, setOpen, header, body, onSave }) {
     return (
@@ -21,20 +22,20 @@ export default function Modal({ open, setOpen, header, body, onSave }) {
                                 </div>
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b gap-2">
-                                    <button
+                                    <Button
                                         onClick={() => setOpen(false)}
                                         type="button"
-                                        className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-600 hover:bg-gray-100"
+                                        variant="secondary"
                                     >
                                         Close
-                                    </button>
-                                    <button
-                                        className="rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    </Button>
+                                    <Button
+                                        variant="primary"
                                         type="button"
                                         onClick={() => setOpen(false)}
                                     >
                                         Save
-                                    </button>
+                                    </Button>
                                 </div>
                             </div>
                         </div>
