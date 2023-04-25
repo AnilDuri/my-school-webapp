@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { FetchSchoolParents, useSchoolParents } from "../../util/db";
+import Modal from '../Modal';
 
 const people = [
     { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
@@ -122,6 +123,7 @@ export default function ParentsTab() {
                     </div>
                 </div>
             </div>
+            <Modal open={open} setOpen={setOpen} />
         </>
     )
 }
