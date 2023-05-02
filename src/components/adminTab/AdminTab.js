@@ -1,24 +1,21 @@
 import { useState } from 'react';
 import { Button } from '../Button'
-import { FetchSchoolParents, useSchoolParents } from "../../util/db";
-import AddParentModal from './AddParentModal';
 import { TabContainer, TabContent, TabHeader, TabTitle } from '../layouts/layouts';
-import { people } from '../../constants/people';
+import { admins } from '../../constants/people';
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function ParentsTab() {
+export default function AdminTab() {
     const [open, setOpen] = useState(false)
-    // const parents = useSchoolParents('7ry063Ho9Ny7PqS2JZBo'); //Sandford Schools Ids
-    // console.log('PARENTS: ', parents );
     return (
         <>
             <TabContainer>
                 <TabHeader
                     left={
-                        <TabTitle title={'Parents'} subtitle={'A list of all the Parents in your account including their name, phone number and email.'} />}
+                        <TabTitle title={'Admins'} subtitle={'A list of all the Admins in your account including their name, phone number and email.'} />}
                     right={
                         <div className="flex gap-2">
                             <Button
@@ -32,7 +29,7 @@ export default function ParentsTab() {
                                 type="button"
                                 onClick={() => setOpen(true)}
                             >
-                                Add Parent
+                                Add Admin
                             </Button>
                         </div>
                     } />
@@ -67,11 +64,11 @@ export default function ParentsTab() {
                             </tr>
                         </thead>
                         <tbody>
-                            {people.map((person, personIdx) => (
+                            {admins.map((person, personIdx) => (
                                 <tr key={person.email}>
                                     <td
                                         className={classNames(
-                                            personIdx !== people.length - 1 ? 'border-b border-gray-200' : '',
+                                            personIdx !== admins.length - 1 ? 'border-b border-gray-200' : '',
                                             'whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8'
                                         )}
                                     >
@@ -79,7 +76,7 @@ export default function ParentsTab() {
                                     </td>
                                     <td
                                         className={classNames(
-                                            personIdx !== people.length - 1 ? 'border-b border-gray-200' : '',
+                                            personIdx !== admins.length - 1 ? 'border-b border-gray-200' : '',
                                             'whitespace-nowrap hidden px-3 py-4 text-sm text-gray-500 sm:table-cell'
                                         )}
                                     >
@@ -87,7 +84,7 @@ export default function ParentsTab() {
                                     </td>
                                     <td
                                         className={classNames(
-                                            personIdx !== people.length - 1 ? 'border-b border-gray-200' : '',
+                                            personIdx !== admins.length - 1 ? 'border-b border-gray-200' : '',
                                             'whitespace-nowrap hidden px-3 py-4 text-sm text-gray-500 lg:table-cell'
                                         )}
                                     >
@@ -96,7 +93,7 @@ export default function ParentsTab() {
 
                                     <td
                                         className={classNames(
-                                            personIdx !== people.length - 1 ? 'border-b border-gray-200' : '',
+                                            personIdx !== admins.length - 1 ? 'border-b border-gray-200' : '',
                                             'relative whitespace-nowrap py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8'
                                         )}
                                     >
@@ -110,7 +107,8 @@ export default function ParentsTab() {
                     </table>
                 </TabContent>
             </TabContainer >
-            <AddParentModal open={open} setOpen={setOpen} />
+            {/* Add Admin Modal here */}
+            {/* <AddParentModal open={open} setOpen={setOpen} /> */}
         </>
     )
 }

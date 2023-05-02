@@ -3,9 +3,10 @@ import { AcademicCapIcon, CalendarIcon, ChartPieIcon, DocumentDuplicateIcon, Fol
 import CalendarTab from './calendarTab/CalendarTab'
 import AddParentModal from './parentsTab/AddParentModal'
 import ParentsTab from './parentsTab/ParentsTab'
+import AdminTab from './adminTab/AdminTab'
 
 const navigation = [
-    { name: 'Admins', href: '#', icon: HomeIcon, count: '5', current: true},
+    { name: 'Admins', href: '#', icon: HomeIcon, count: '5', current: true, component: <AdminTab /> },
     { name: 'Parents', href: '#', icon: UserGroupIcon, count: '1k', current: false, component: <ParentsTab /> },
     { name: 'Students', href: '#', icon: AcademicCapIcon, count: '800', current: false },
     { name: 'Teachers', href: '#', icon: UsersIcon, current: false },
