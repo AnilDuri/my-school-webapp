@@ -6,17 +6,17 @@ import ParentsTab from './parentsTab/ParentsTab'
 import AdminTab from './adminTab/AdminTab'
 import StudentsTab from './studentTab/StudentTab'
 import TeachersTab from './teachersTab/TeachersTab'
-import { admins, people } from '../constants/people';
+import { admins, people, students } from '../constants/people';
 
 const navigation = [
-    { name: 'Admins', href: '#', icon: HomeIcon, count: `${admins.length}`, current: true, component: <AdminTab /> },
-    { name: 'Parents', href: '#', icon: UserGroupIcon, count: `${people.length}`, current: false, component: <ParentsTab /> },
-    { name: 'Students', href: '#', icon: AcademicCapIcon, count: '800', current: false, component: <StudentsTab /> },
-    { name: 'Teachers', href: '#', icon: UsersIcon, current: false, count: `${admins.length}`, component: <TeachersTab /> },
-    { name: 'Classes', href: '#', icon: FolderIcon, count: '12', current: false },
-    { name: 'Calendar', href: '#', icon: CalendarIcon, current: false, component: <CalendarTab /> },
-    { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-    { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+    { name: 'Admins', href: '#', icon: HomeIcon, count: `${admins.length}`, current: true, component: <AdminTab />, disabled: false },
+    { name: 'Parents', href: '#', icon: UserGroupIcon, count: `${people.length}`, current: false, component: <ParentsTab />, disabled: false },
+    { name: 'Students', href: '#', icon: AcademicCapIcon, count: `${students.length}`, current: false, component: <StudentsTab />, disabled: false },
+    { name: 'Teachers', href: '#', icon: UsersIcon, current: false, count: `${admins.length}`, component: <TeachersTab />, disabled: false },
+    { name: 'Classes', href: '#', icon: FolderIcon, current: false, disabled: false },
+    { name: 'Calendar', href: '#', icon: CalendarIcon, current: false, component: <CalendarTab />, disabled: false },
+    { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false, disabled: true },
+    { name: 'Reports', href: '#', icon: ChartPieIcon, current: false, disabled: true },
 ]
 const teams = [
     { id: 1, name: 'Settings', href: '#', initial: 'H', current: false },
@@ -36,7 +36,9 @@ export default function DashboardSectionV2({ selectedTab, setSelectedTab }) {
                     <li>
                         <ul className="-mx-2 space-y-1">
                             {navigation.map((item) => (
-                                <li key={item.name} onClick={() => setSelectedTab(item)}>
+                                <li
+                                    key={item.name}
+                                    onClick={() => setSelectedTab(item)}>
                                     <a
                                         href={item.href}
                                         className={classNames(
