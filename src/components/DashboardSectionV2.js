@@ -4,10 +4,11 @@ import CalendarTab from './calendarTab/CalendarTab'
 import AddParentModal from './parentsTab/AddParentModal'
 import ParentsTab from './parentsTab/ParentsTab'
 import AdminTab from './adminTab/AdminTab'
+import { admins, people } from '../constants/people';
 
 const navigation = [
-    { name: 'Admins', href: '#', icon: HomeIcon, count: '5', current: true, component: <AdminTab /> },
-    { name: 'Parents', href: '#', icon: UserGroupIcon, count: '1k', current: false, component: <ParentsTab /> },
+    { name: 'Admins', href: '#', icon: HomeIcon, count: `${admins.length}`, current: true, component: <AdminTab /> },
+    { name: 'Parents', href: '#', icon: UserGroupIcon, count: `${people.length}`, current: false, component: <ParentsTab /> },
     { name: 'Students', href: '#', icon: AcademicCapIcon, count: '800', current: false },
     { name: 'Teachers', href: '#', icon: UsersIcon, current: false },
     { name: 'Classes', href: '#', icon: FolderIcon, count: '12', current: false },
