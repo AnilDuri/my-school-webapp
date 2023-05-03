@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '../Button'
 import { FetchSchoolParents, useSchoolParents } from "../../util/db";
 import AddParentModal from './AddParentModal';
-import { TabContainer, TabContent, TabHeader, TabTitle } from '../layouts/layouts';
+import { TabContainer, TabContent, TabHeader, TabTitle } from '../../layouts/layouts';
 import { people } from '../../constants/people';
 
 function classNames(...classes) {

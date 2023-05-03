@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '../Button'
-import { TabContainer, TabContent, TabHeader, TabTitle } from '../layouts/layouts';
+import { TabContainer, TabContent, TabHeader, TabTitle } from '../../layouts/layouts';
 import { students } from '../../constants/people';
 
 

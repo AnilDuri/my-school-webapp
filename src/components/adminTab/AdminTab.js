@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Button } from '../Button'
-import { TabContainer, TabContent, TabHeader, TabTitle } from '../layouts/layouts';
+import { TabContainer, TabContent, TabHeader, TabTitle } from '../../layouts/layouts';
 import { admins } from '../../constants/people';
+import AddAdminModal from './AddAdminModal';
 
 
 function classNames(...classes) {
@@ -107,8 +108,7 @@ export default function AdminTab() {
                     </table>
                 </TabContent>
             </TabContainer >
-            {/* Add Admin Modal here */}
-            {/* <AddParentModal open={open} setOpen={setOpen} /> */}
+            <AddAdminModal open={open} setOpen={setOpen} />
         </>
     )
 }
