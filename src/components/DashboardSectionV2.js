@@ -13,7 +13,7 @@ const navigation = [
     { name: 'Parents', href: '#', icon: UserGroupIcon, count: `${people.length}`, current: false, component: <ParentsTab />, disabled: false },
     { name: 'Students', href: '#', icon: AcademicCapIcon, count: `${students.length}`, current: false, component: <StudentsTab />, disabled: false },
     { name: 'Teachers', href: '#', icon: UsersIcon, current: false, count: `${admins.length}`, component: <TeachersTab />, disabled: false },
-    { name: 'Classes', href: '#', icon: FolderIcon, current: false, disabled: false },
+    { name: 'Classes', href: '#', icon: FolderIcon, current: false, disabled: true },
     { name: 'Calendar', href: '#', icon: CalendarIcon, current: false, component: <CalendarTab />, disabled: false },
     { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false, disabled: true },
     { name: 'Reports', href: '#', icon: ChartPieIcon, current: false, disabled: true },
