@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '../Button'
 import { TabContainer, TabContent, TabHeader, TabTitle } from '../../layouts/layouts';
 import { students } from '../../constants/people';
+import AddStudentModal from './AddStudentModal';
 
 
 function classNames(...classes) {
@@ -107,8 +108,7 @@ export default function StudentTab() {
                     </table>
                 </TabContent>
             </TabContainer >
-            {/* Add Admin Modal here */}
-            {/* <AddParentModal open={open} setOpen={setOpen} /> */}
+            <AddStudentModal open={open} setOpen={setOpen} />
         </>
     )
 }
