@@ -42,10 +42,15 @@ export default function DashboardSectionV2({ selectedTab, setSelectedTab }) {
                             {navigation.map((item) => (
                                 <li
                                     key={item.name}
-                                    onClick={() => setSelectedTab(item)}>
+                                    onClick={() => {
+                                        if (!item.disabled) {
+                                            setSelectedTab(item)
+                                        }
+                                    }}>
                                     <a
                                         href={item.href}
-                                        className={classNames(
+                                        className={classNames(item.disabled ?
+                                            'text-gray-400 bg-gray-50 hover:cursor-not-allowed' :
                                             item.name === selectedTab.name
                                                 ? 'bg-gray-50 text-indigo-600'
                                                 : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50',
@@ -54,7 +59,9 @@ export default function DashboardSectionV2({ selectedTab, setSelectedTab }) {
                                     >
                                         <item.icon
                                             className={classNames(
-                                                item.name === selectedTab.name ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600',
+                                                item.disabled ?
+                                                    'text-gray-300 bg-gray-50 hover:cursor-not-allowed' :
+                                                    item.name === selectedTab.name ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600',
                                                 'h-6 w-6 shrink-0'
                                             )}
                                             aria-hidden="true"
