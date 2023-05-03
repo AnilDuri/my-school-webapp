@@ -1,12 +1,12 @@
 import { AcademicCapIcon, CalendarIcon, ChartPieIcon, DocumentDuplicateIcon, FolderIcon, HomeIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/24/outline'
-
+import { useEffect } from 'react';
 import CalendarTab from './calendarTab/CalendarTab'
-import AddParentModal from './parentsTab/AddParentModal'
 import ParentsTab from './parentsTab/ParentsTab'
 import AdminTab from './adminTab/AdminTab'
 import StudentsTab from './studentTab/StudentTab'
 import TeachersTab from './teachersTab/TeachersTab'
 import { admins, people, students } from '../constants/people';
+
 
 const navigation = [
     { name: 'Admins', href: '#', icon: HomeIcon, count: `${admins.length}`, current: true, component: <AdminTab />, disabled: false },
@@ -29,6 +29,10 @@ function classNames(...classes) {
 }
 
 export default function DashboardSectionV2({ selectedTab, setSelectedTab }) {
+
+    useEffect(() => {
+        setSelectedTab(navigation[0])
+    }, [])
     return (
         <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 h-full">
             <nav className="flex flex-1 flex-col mt-1">
