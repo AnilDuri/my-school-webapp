@@ -6,7 +6,7 @@ export const TabContainer = ({ children }) => {
 
 export const TabHeader = ({ left, right }) => {
     return (
-        <div className="sm:flex sm:items-center">
+        <div className="flex items-center justify-between">
             {left}
             {right}
         </div>
